@@ -1,5 +1,4 @@
 //로또의 최고 순위와 최저 순위
-
 //풀이 1
 function solution(lottos, win_nums) {
   let winNum = 0;
