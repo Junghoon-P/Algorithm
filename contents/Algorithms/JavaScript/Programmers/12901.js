@@ -10,3 +10,12 @@ function solution(a, b) {
   }
   return day[sum % 7];
 }
+
+//Date 활용법
+function getDayName(a, b) {
+  var date = new Date(2016, a - 1, b);
+  return date.toString().slice(0, 3).toUpperCase();
+}
+
+//아래 코드는 테스트를 위한 코드입니다.
+console.log(getDayName(5, 24));
