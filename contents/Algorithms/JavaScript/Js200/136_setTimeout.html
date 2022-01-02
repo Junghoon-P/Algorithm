@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <!-- <script>
+    const timeId = setTimeout(function () {
+      console.log('boom')
+    }, 3000);
+
+    clearTimeout(timeId)
+    //setTimeout을 해제시킨다.
+  </script> -->
+  <script>
+
+    const timer = {
+      run: function () {
+        if (this.t) {
+          console.log('이미 실행된 타이머가 있습니다.');
+        }
+        this.t = setTimeout(function () {
+          console.log('1초 뒤에 실행됩니다.');
+        }, 1000);
+      },
+
+      cancel: function () {
+        if (this.t) {
+          clearTimeout(this.t);
+          this.t = undefined;
+        }
+      }
+    }
+    // 함수 안에서 this는 함수를 호출한 객체를 가르킨다.
+    timer.run();
+    timer.cancel();
+    timer.run();
+  </script>
+  <!-- <script>
+    setTimeout(() => {
+      console.log('JavaScript');
+    }, 0);
+
+    console.log('200제');
+    // js엔진 스케줄러가 setTimeout을 본다면 값이 0이라고 해도
+    // 일단은 바로 다음 코드를 우선적으로 스케줄링을 한다.
+  </script> -->
+  <script>
+    // 퀴즈 : 다음과 같은 코드가 있을때 console.log에 찍힐 i의 값은 몇일까?
+    let i = 0;
+
+    setTimeout(() => {
+      console.log('time out : ' + i);
+    }, 10)
+
+    for (let j = 0; j < 10000000; j++) {
+      i++;
+    }
+
+//9999999
+//setTimeout는 for문이 다돌고 시작된다.(비동기)
+  </script>
+</body>
+
+</html>
