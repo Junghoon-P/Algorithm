@@ -6,7 +6,7 @@ function solution(n) {
   }
 }
 
-// 다른 풀이
+// 다른 사람 풀이
 function solution(n, x = 1) {
   while (x++) {
     if (n % x === 1) {
